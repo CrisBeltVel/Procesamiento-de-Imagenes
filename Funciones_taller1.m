@@ -101,73 +101,6 @@ end
 
 end
  
-%Md = [0 14 3 13;11 5 8 6; 2 12 1 15; 9 7 10 4];
-
-%https://www.uv.es/gpoei/eng/Pfc_web/generalidades/dithering.htm
-%https://www.lpi.tel.uva.es/~nacho/docencia/ing_ond_1/trabajos_03_04/sonificacion/cabroa_archivos/cuantizacion.html
-% [m,n] = size(g);
-%     for F=1:m
-%         x= mod(F,4);
-%         for C=1:n
-%             in= g(F,C);
-%               b0=in/16;
-%             
-%             if b0>= 0
-%                 b1=0;
-%             else
-%                 b1= b0+1;
-%             end
-%             vi=in & 0;
-%              y= mod(C,4);
-%             if vi > Md(x+1,y+1)
-%                 s(F,C)=b1;
-%             else
-%                 s(F,C)=b0;
-%             end
-%             
-%         end
-%     end
-%     
-
-
-%  figure(1),imshow(s)
-
-% figure(1), subplot(2,4,1),imshow(g/2)
-% 
-% figure(1), subplot(2,4,2),imshow(g/4)
-% 
-% figure(1), subplot(2,4,3),imshow(g/8)
-% 
-% figure(1), subplot(2,4,4),imshow(g/16)
-% 
-% figure(1), subplot(2,4,5),imshow(g/32)
-% 
-% figure(1), subplot(2,4,6),imshow(g/64)
-% 
-% figure(1), subplot(2,4,7),imshow(g/128)
-% 
-% figure(1), subplot(2,4,8),imshow(g/256)
-
-
-
-
-
-%figure(11), imagesc((g/256)>0.40), axis image, colormap gray
-
-
-% [m,n] = size(g);
-%     for F=11:m
-%         for C=11:n
-%             if g(F,C)>=16 && g(F,C)<255
-%                 g(F,C)=g(F,C)/16;
-%             end
-%         end
-%     end
-% 
-% 
-% whos
-% figure(3),imshow(g); 
-% figure(4),imshow(G); 
 
 
 
@@ -275,64 +208,6 @@ figure(20), imshow(u);title("Imagen 20x20")
 
  
 
-%  
-%  
-% %  figure(1), subplot(2,4,2),imshow(A),title("Imagen Original")
-% % figure(1), subplot(2,4,5),imshow(a),title("Imagen en escala de grises");
-% % figure(1), subplot(2,4,6),imshow(b),title("Imagen en escala 3x3");
-% 
-% 
-% 
-% 
-% end
-%  
-% function [] = punto6_Redux_resol(a,m,n)
-% a=double(a);
-%  suma=0;
-%  r=1;
-%  j=1;
-% 
-% for F=2:3:m-3
-%     fj = F-j;
-%    for C=2:3:n-3 
-%      for f=F-1:F+1
-%         for c=C-1:C+1
-%           suma= a(f,c)+suma;
-%         end
-%      end
-%      cr= C-r;
-%      s(fj,cr)= suma/9;
-%      r=r+2;
-%      suma=0;
-%    end
-%    j=j+2;
-%    r=1;
-% end
-% 
-%  a=uint8(a);
-%  s=uint8(s);
-% 
-% figure(20), imshow(s);
-% figure(2),imshow(a); 
-% whos
-% end
-% 
-% function [] = punto7_Constante(c)
-% V = imread('Vela.jpg');
-% v= rgb2gray(V);
-% figure(4),imshow(v); 
-%      v(:,:)=v(:,:)*c;
-% figure(3),imshow(v); 
-% end
-% 
-% function [] = punto8_Diferencia(a)
-% 
-% b = imrotate(a,2,'bicubic','crop');
-% c=a-b;
-% 
-% figure(1), subplot(2,3,2),imshow(a),title("Imagen Original")
-% figure(1), subplot(2,3,4),imshow(b),title("Imagen rotada");
-% figure(1), subplot(2,3,6),imshow(c),title("Imagen Diferenciada");
 
 end
 
@@ -440,15 +315,6 @@ figure(1), subplot(2,3,6),imshow(e),title("Imagen Diferenciada");
 
 end
 
-
-% 
-% a=[222,120,100,68,205,190,165,121;220,36,122,65,170,155,245,72;64,210,58,96,54,181,236,101;89,100,80,97,32,111,214,105;111,21,55,61,111,62,198,178;22,33,66,105,155,65,69,222;68,25,89,75,36,145,33,200;250,220,11,29,192,25,222,230]
-% 
-% whos
-% hist(a);
-% [C,ia,ic] = unique(a);
-% a_counts = accumarray(ic,1);
-% value_counts = [C, a_counts]
 
 
 
