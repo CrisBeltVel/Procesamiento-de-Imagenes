@@ -3,7 +3,7 @@ A = imread('1_Nature.jpg');
 a= rgb2gray(A);
 [m,n] = size(a);
 
-
+%
 %punto1_grises(A,a)
 %punto2_histograma();
 %punto3_reduccion(A,a,m,n)
